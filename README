@@ -1,0 +1,8 @@
+This is the build script that automates creation of bundle.jar suitable
+for uploading to oss.sonatype.org repository as third-party artefact. Put
+the appropriate Saxon-HE versions to the top of pom.xml and build.xml and
+run ant. Enter your GPG passphrase when asked. GPG needs to be installed
+on your machine.
+
+Read the guide for Uploading 3rd-party Artifacts to The Central Repository:
+https://docs.sonatype.org/display/Repository/Uploading+3rd-party+Artifacts+to+The+Central+Repository

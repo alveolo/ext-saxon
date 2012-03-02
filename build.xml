@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="bundle-saxon" default="build">
+	<property name="version-series" value="9.4"/>
+	<property name="version-download" value="9-4-0-3"/>
+	<property name="version-maven" value="9.4.0.3"/>
+
+	<property name="download-prefix" value="http://sourceforge.net/projects/saxon/files/Saxon-HE/${version-series}"/>
+
+	<target name="prepare" description="Prepare clean target directory">
+		<delete dir="target"/>
+		<mkdir dir="target"/>
+	</target>
+
+	<target name="pom" depends="prepare">
+		<copy file="pom.xml" tofile="target/saxon-he-${version-maven}.pom"/>
+	</target>
+
+	<target name="jar" depends="prepare">
+		<get src="${download-prefix}/SaxonHE${version-download}J.zip/download"
+				dest="target/SaxonHE${version-download}J.zip"/>
+		<unzip src="target/SaxonHE${version-download}J.zip" dest="target">
+			<patternset includes="saxon9he.jar"/>
+		</unzip>
+
+		<!-- Repack the JAR file as it is quite large and not compressed originally -->
+		<unzip src="target/saxon9he.jar" dest="target/classes"/>
+		<zip basedir="target/classes" destfile="target/saxon-he-${version-maven}.jar"/>
+
+		<delete file="target/SaxonHE${version-download}J.zip"/>
+		<delete file="target/saxon9he.jar"/>
+		<delete dir="target/classes"/>
+	</target>
+
+	<target name="sources" depends="prepare">
+		<get src="${download-prefix}/saxon${version-download}source.zip/download"
+				dest="target/saxon-he-${version-maven}-sources.jar"/>
+	</target>
+
+	<target name="javadoc" depends="sources">
+		<unzip src="target/saxon-he-${version-maven}-sources.jar" dest="target/sources"/>
+		<javadoc sourcepath="target/sources" destdir="target/javadoc"/>
+		<jar basedir="target/javadoc" destfile="target/saxon-he-${version-maven}-javadoc.jar"/>
+
+		<delete dir="target/javadoc"/>
+		<delete dir="target/sources"/>
+	</target>
+
+	<target name="artefacts" depends="pom, jar, javadoc, sources"/>
+
+	<target name="sign" depends="artefacts">
+		<exec executable="gpg">
+			<arg value="-ab"/>
+			<arg value="target/saxon-he-${version-maven}.pom"/>
+		</exec>
+		<exec executable="gpg">
+			<arg value="-ab"/>
+			<arg value="target/saxon-he-${version-maven}.jar"/>
+		</exec>
+		<exec executable="gpg">
+			<arg value="-ab"/>
+			<arg value="target/saxon-he-${version-maven}-javadoc.jar"/>
+		</exec>
+		<exec executable="gpg">
+			<arg value="-ab"/>
+			<arg value="target/saxon-he-${version-maven}-sources.jar"/>
+		</exec>
+	</target>
+
+	<target name="build" depends="sign" description="description">
+		<delete file="target/bundle.jar"/>
+		<jar destfile="target/bundle.jar" basedir="target" includes="saxon-he-*"/>
+		<delete>
+			<fileset dir="target" includes="saxon-he-*"/>
+		</delete>
+	</target>
+</project>
