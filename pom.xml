@@ -33,7 +33,6 @@
 		</license>
 		<license>
 			<name>CERN License</name>
-			<url>http://www.saxonica.com/documentation/conditions/third-party-components.xml</url>
 			<comments>
 				Saxon packages / modules: net.sf.saxon.sort.GenericSorter;
 				Modifications: Minimal modifications needed to integrate the code
@@ -49,7 +48,6 @@
 		</license>
 		<license>
 			<name>Unicode License</name>
-			<url>http://www.saxonica.com/documentation/conditions/third-party-components.xml</url>
 			<comments>
 				Saxon packages / modules: net.sf.saxon.sort.codenorm.*;
 				Modifications: Core functionality unchanged; rewrote the module that loads the data tables from the
@@ -85,7 +83,6 @@
 		</license>
 		<license>
 			<name>James Clark License</name>
-			<url>http://www.saxonica.com/documentation/conditions/third-party-components.xml</url>
 			<comments>
 				Saxon packages / modules: net.sf.saxon.expr.*, modules ExpressionParser, Tokenizer, Token;
 				Modifications: Almost entirely rewritten with enhancements to handle XPath 2.0/3.0 and XQuery 1.0/3.0
@@ -115,7 +112,6 @@
 		</license>
 		<license>
 			<name>Thai Open Source Center Ltd. License</name>
-			<url>http://www.saxonica.com/documentation/conditions/third-party-components.xml</url>
 			<comments>
 				Saxon packages / modules: net.sf.saxon.java, modules JDK14RegexTranslator and JDK15RegexTranslator;
 				Modifications: Significantly enhanced to handle XPath 2.0/3.0 regular expressions as input and to
