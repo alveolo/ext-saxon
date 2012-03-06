@@ -20,6 +20,131 @@
 			<name>Mozilla Public License Version 1.0</name>
 			<url>http://www.mozilla.org/MPL/MPL-1.0.html</url>
 		</license>
+
+		<!-- Third-party licenses for open source code that has been integrated at source level -->
+		<license>
+			<name>Netscape Public License Version 1.1</name>
+			<url>http://www.mozilla.org/MPL/NPL-1.1.html</url>
+			<comments>
+				Saxon packages / modules: Two inner classes within net.sf.saxon.value.Base64Value;
+				Modifications: Minor modifications needed to meet the W3C XML Schema specification for Base64 lexical
+				representation
+			</comments>
+		</license>
+		<license>
+			<name>CERN License</name>
+			<url>http://www.saxonica.com/documentation/conditions/third-party-components.xml</url>
+			<comments>
+				Saxon packages / modules: net.sf.saxon.sort.GenericSorter;
+				Modifications: Minimal modifications needed to integrate the code
+
+				Copyright © 1999 CERN - European Organization for Nuclear Research.
+
+				Permission to use, copy, modify, distribute and sell this software and its documentation for any purpose
+				is hereby granted without fee, provided that the above copyright notice appear in all copies and that
+				both that copyright notice and this permission notice appear in supporting documentation. CERN makes no
+				representations about the suitability of this software for any purpose. It is provided "as is" without
+				expressed or implied warranty.
+			</comments>
+		</license>
+		<license>
+			<name>Unicode License</name>
+			<url>http://www.saxonica.com/documentation/conditions/third-party-components.xml</url>
+			<comments>
+				Saxon packages / modules: net.sf.saxon.sort.codenorm.*;
+				Modifications: Core functionality unchanged; rewrote the module that loads the data tables from the
+				Unicode character database; removed dependencies on ICU; fixed a few bugs
+
+				COPYRIGHT AND PERMISSION NOTICE
+				Copyright © 1991-2007 Unicode, Inc. All rights reserved. Distributed under the Terms of Use in
+				http://www.unicode.org/copyright.html.
+
+				Permission is hereby granted, free of charge, to any person obtaining a copy of the Unicode data files
+				and any associated documentation (the "Data Files") or Unicode software and any associated documentation
+				(the "Software") to deal in the Data Files or Software without restriction, including without limitation
+				the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Data Files or
+				Software, and to permit persons to whom the Data Files or Software are furnished to do so, provided that
+				(a) the above copyright notice(s) and this permission notice appear with all copies of the Data Files or
+				Software,
+				(b) both the above copyright notice(s) and this permission notice appear in associated documentation, and
+				(c) there is clear notice in each modified Data File or in the Software as well as in the documentation
+				associated with the Data File(s) or Software that the data or software has been modified.
+
+				THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+				INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+				NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
+				NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES
+				WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+				OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA FILES OR
+				SOFTWARE.
+
+				Except as contained in this notice, the name of a copyright holder shall not be used in advertising or
+				otherwise to promote the sale, use or other dealings in these Data Files or Software without prior
+				written authorization of the copyright holder.
+			</comments>
+		</license>
+		<license>
+			<name>James Clark License</name>
+			<url>http://www.saxonica.com/documentation/conditions/third-party-components.xml</url>
+			<comments>
+				Saxon packages / modules: net.sf.saxon.expr.*, modules ExpressionParser, Tokenizer, Token;
+				Modifications: Almost entirely rewritten with enhancements to handle XPath 2.0/3.0 and XQuery 1.0/3.0
+				syntax, improved error reporting, etc.
+
+				Copyright (c) 1998, 1999 James Clark
+
+				Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+				associated documentation files (the "Software"), to deal in the Software without restriction, including
+				without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+				copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to
+				the following conditions:
+
+				The above copyright notice and this permission notice shall be included in all copies or substantial
+				portions of the Software.
+
+				THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+				LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+				NO EVENT SHALL JAMES CLARK BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+				OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+				OTHER DEALINGS IN THE SOFTWARE.
+
+				Except as contained in this notice, the name of James Clark shall not be used in advertising or
+				otherwise to promote the sale, use or other dealings in this Software without prior written
+				authorization from James Clark.
+			</comments>
+		</license>
+		<license>
+			<name>Thai Open Source Center Ltd. License</name>
+			<url>http://www.saxonica.com/documentation/conditions/third-party-components.xml</url>
+			<comments>
+				Saxon packages / modules: net.sf.saxon.java, modules JDK14RegexTranslator and JDK15RegexTranslator;
+				Modifications: Significantly enhanced to handle XPath 2.0/3.0 regular expressions as input and to
+				produce JDK 1.5 regular expressions as output; and to support Unicode 6.0.0.
+
+				Copyright (c) 2001-2003 Thai Open Source Software Center Ltd All rights reserved.
+
+				Redistribution and use in source and binary forms, with or without modification, are permitted provided
+				that the following conditions are met:
+
+				* Redistributions of source code must retain the above copyright notice, this list of conditions and
+				the following disclaimer.
+
+				* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and
+				the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+				* Neither the name of the Thai Open Source Software Center Ltd nor the names of its contributors may be
+				used to endorse or promote products derived from this software without specific prior written permission.
+
+				THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+				WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+				PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY
+				DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+				TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+				INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+				TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+				ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+			</comments>
+		</license>
 	</licenses>
 
 	<scm>
